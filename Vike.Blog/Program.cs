@@ -6,6 +6,6 @@ await Bootstrapper.Factory
     .CreateWeb(args)
     .DeployToGitHubPages(
         "VikeMK",
-        "vikemk.github.io",
+        "blog",
         Config.FromSetting<string>("GITHUB_TOKEN"))
     .RunAsync();
