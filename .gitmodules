@@ -1,0 +1,3 @@
+[submodule "Vike.Blog/theme"]
+	path = Vike.Blog/theme
+	url = https://github.com/statiqdev/CleanBlog.git

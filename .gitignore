@@ -1,0 +1,6 @@
+.vs
+bin
+obj
+cache
+output
+*.csproj.user
