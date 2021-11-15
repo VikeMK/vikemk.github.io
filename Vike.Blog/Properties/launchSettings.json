@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Vike.Blog (Preview)": {
-      "commandName": "Project",
-      "commandLineArgs": "preview"
-    }
-  }
-}
