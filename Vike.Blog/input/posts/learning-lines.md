@@ -38,7 +38,7 @@ Speedruns for Mario Kart 8 Deluxe are tracked on [speedrun.com](https://www.spee
 Speedruns must be done in VS Race mode and you can either speedrun individual cups, 16 tracks, or all 48 tracks in one go. 
 The more tracks in the speedrun, the less likely it is that the run will contain inconsistent or risky strategies, so I personally prefer the 48 tracks category for practice.
 
-But speedruns have another drawback which makes them less popular, loading times. If you have the cartridge version of the game, you will lose over 1 second for each track in loading times compare to those who have a digital copy of the game. 
+But speedruns have another drawback which makes them less popular, loading times. If you have the cartridge version of the game, you will lose over 1 second for each track in loading times compared to those who have a digital copy of the game. 
 In addition, we have seen that some people will have large loading time differences even if they are both using digital, and large loading time differences between two runs on the same switch. This means that even if you played a track perfectly you may still lose time because your load took 300ms longer than your PB.
 
 Recently the speedrun staff have been retiming the top runs for each category by excluding loading times, but it is a very manual process and takes too much time, and it doesn't help if you are trying to improve your own times since you are unlikely to do all the work of removing loading times from your own runs.
@@ -50,7 +50,7 @@ Over a year ago a new speedrun category called [Time Trials](https://www.speedru
 For this category you must use the same combination for every track, you must do the tracks in order, and you only have one attempt at each track. The time at the end is the sum of all the individual time trials.
 This takes all the benefits of speedruns and removes the drawback of loading times since they aren't included in the total time.
 
-If you open the category rules on the speedrun.com page it has instructions for setting up LiveSplit to manually enter the TT times
+If you open the category rules on the speedrun.com page it has instructions for setting up LiveSplit to manually enter the TT times.
 
 Unfortunately there is a drawback to time trial speedruns, and that is that barely anyone has done them. 
 And with this blog post I hope it might be enough to convince people to give shroomless time trial speedruns a go.
