@@ -1,4 +1,5 @@
 ﻿{
   "SiteTitle": "Vike's Blog",
-  "GenerateSitemap": false
+  "GenerateSitemap": false,
+  "DateTimeInputCulture": "en-au"
 }
