@@ -1,5 +1,6 @@
 ﻿{
   "SiteTitle": "Vike's Blog",
   "GenerateSitemap": false,
-  "DateTimeInputCulture": "en-au"
+  "DateTimeInputCulture": "en-au",
+  "Image": "images/bg/mks.png"
 }

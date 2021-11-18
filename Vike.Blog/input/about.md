@@ -1,6 +1,7 @@
 ﻿Title: About Me
 NavTitle: About
 Order: 2
+Image: /images/bg/rrrd.png
 ---
 Hi 👋 my name is Vike and I'm a 23 year old that lives in Brisbane, Australia.
 I work as a software engineer remotely for a large tech company based in the US where I develop software that is used by millions of people every day.

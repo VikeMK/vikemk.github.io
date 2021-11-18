@@ -1,6 +1,7 @@
 ﻿Title: Learning Lines in Mario Kart 8 Deluxe
 Description: A comparison of various strategies to learning your lines
 Published: 15/11/2021
+Image: /images/bg/drr.png
 ---
 
 I am a strong believer that time trials are a great way for people to improve in competitive Mario Kart 8 Deluxe, and I have spent hundreds of hours practicing my lines in time trial mode.

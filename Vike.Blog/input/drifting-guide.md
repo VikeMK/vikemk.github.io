@@ -2,8 +2,7 @@
 Title: Vike’s Guide to Drifting in MK8DX
 PageTitle: Vike’s Guide to Drifting in MK8DX
 Order: 1
-Published: 6/27/2021
-Image: /images/rdp3.png
+Image: /images/bg/rdp3.png
 ---
 
 ## Preface
