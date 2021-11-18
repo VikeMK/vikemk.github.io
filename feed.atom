@@ -4,11 +4,13 @@
 	<title />
 	<link rel="self" href="/" />
 	<rights>Copyright © 2021</rights>
-	<updated>2021-11-18T10:31:59Z</updated>
+	<updated>2021-11-18T11:08:31Z</updated>
+	<logo>/images/bg/mks.png</logo>
 	<entry>
 		<id>/posts/learning-lines</id>
 		<title>Learning Lines in Mario Kart 8 Deluxe</title>
 		<link href="/posts/learning-lines" />
+		<link rel="enclosure" type="image" href="/images/bg/drr.png" />
 		<updated>2021-11-15T00:00:00Z</updated>
 		<content>&lt;p&gt;I am a strong believer that time trials are a great way for people to improve in competitive Mario Kart 8 Deluxe, and I have spent hundreds of hours practicing my lines in time trial mode.
 If a new player who is starting out is asking me for advice on what they can do to get better, I always tell them that improving your lines is a great way to get ahead of your competition.&lt;/p&gt;
