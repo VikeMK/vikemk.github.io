@@ -2,6 +2,7 @@
 using Statiq.Common;
 using Statiq.Core;
 using Statiq.Web;
+using Statiq.Web.Pipelines;
 
 await Bootstrapper.Factory
     .CreateWeb(args)
@@ -19,7 +20,6 @@ public class AdditionalAssetsPipeline : Pipeline
         ProcessModules = new ModuleList
         {
             new CopyFiles("./CNAME", "CNAME"),
-            new CopyFiles("./assets/favicon/favicon.ico", "favicon.ico"),
         };
     }
 }
@@ -28,7 +28,8 @@ public class FaviconPipeline : Pipeline
 {
     public FaviconPipeline()
     {
-        InputModules = new() { new ExecuteConfig(Config.FromContext(_ => new ReadFiles("assets/favicon/favicon.ico"))) };
+        Dependencies.Add(nameof(Inputs));
+        InputModules = new() { new ReadFiles("assets/favicon/favicon.ico") };
         ProcessModules = new() { new SetDestination("favicon.ico") };
         OutputModules = new() { new WriteFiles() };
     }

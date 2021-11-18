@@ -11,6 +11,8 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '6.0.100' # SDK Version to use.
-    - run: dotnet run --project Vike.Blog -- deploy -l debug
+    - run: |
+        dotnet run --project Vike.Blog -- -l debug
+        dotnet run --project Vike.Blog -- deploy -l debug # Run it twice due to pipeline dependency bug
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

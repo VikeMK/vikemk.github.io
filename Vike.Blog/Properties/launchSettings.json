@@ -2,7 +2,11 @@
   "profiles": {
     "Vike.Blog (Preview)": {
       "commandName": "Project",
-      "commandLineArgs": "preview"
+      "commandLineArgs": "preview -l debug"
+    },
+    "Vike.Blog (Build)": {
+      "commandName": "Project",
+      "commandLineArgs": "-l debug"
     }
   }
 }
