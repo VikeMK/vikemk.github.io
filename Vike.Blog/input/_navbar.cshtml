@@ -1,8 +1,33 @@
-﻿<ul class="navbar-nav ml-auto">
+﻿@*<style>
+.dropdown-item {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+</style>
+*@
+<ul class="navbar-nav ml-auto">
     @foreach(IDocument doc in OutputPages.GetChildrenOf("index.html").Where(x => x.GetBool("ShowInNavbar", true)).OrderBy(x => x.GetInt(Keys.Order)))
     {
-        // Don't add the home page to the nav bar
-        if (doc.Destination != "index.html")
+        @if (doc.GetString("NavbarStyle") == "dropdown")
+        {
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                    @(doc.GetString("NavTitle") ?? doc.GetTitle())
+                </a>
+                <div class="dropdown-menu">
+                    @foreach(IDocument child in doc
+                        .GetChildren()
+                        .OrderByDescending(x => x.GetString("NavTitle")))
+                    {
+                        @Html.DocumentLink(child, child.GetString("NavTitle"), new Dictionary<object, object> { ["class"] = "dropdown-item" })
+                    }
+                </div>
+            </li>
+        }
+        else
         {
             <li class="nav-item">
                 @Html.DocumentLink(doc, doc.GetString("NavTitle"), new Dictionary<object, object> { { "class", "nav-link" } })
