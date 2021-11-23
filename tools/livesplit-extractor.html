@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Vike&#x27;s Blog - LiveSplit Segment Time Extractor</title>
+
+  <link rel="canonical" href="/tools/livesplit-extractor">
+
+      <link type="application/rss+xml" rel="alternate" href="/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" href="/feed.atom" />
+  
+  <meta name="application-name" content="Vike&#x27;s Blog" />
+  <meta name="msapplication-tooltip" content="Vike&#x27;s Blog" />
+  <meta name="msapplication-starturl" content="/" />
+
+  <meta property="og:title" content="Vike&#x27;s Blog - LiveSplit Segment Time Extractor" />
+    <meta property="og:image" content="/images/bg/mks.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/tools/livesplit-extractor" />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/vendor/bootstrap/scss/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/vendor/fontawesome-free/css/brands.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css' data-no-mirror>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' data-no-mirror>
+  
+  <!-- Custom styles for this template -->
+  <link href="/scss/clean-blog.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+  <!-- Lunr search -->
+  
+  
+
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Vike&#x27;s Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/posts">Posts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/drifting-guide">Drifting Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+</ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(&quot;/images/bg/mks.png&quot;)">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="site-heading">
+          <h1>
+            LiveSplit Segment Time Extractor
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <div class="container"> 
+    <div class="row">
+      <div id="content" class="col-md-12">  
+        <div class="custom-file mb-3">
+  <input type="file" class="custom-file-input" id="livesplitFile" accept=".lss" onchange="onFile()">
+  <label class="custom-file-label" for="livesplitFile" id="livesplitFileLabel">Select the LiveSplit file</label>
+</div>
+<div>
+<table class="table table-sm">
+<thead>
+<tr>
+<th scope="col">Segment Name</th>
+<th scope="col">Segment Time</th>
+</tr>
+</thead>
+<tbody id="splitsList">
+<tr><td colspan="2">No file selected</td></tr>
+</tbody>
+</table>
+</div>
+<style>
+.text-monospaced {
+    font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+}
+</style>
+<script>
+function onFile() {
+    var fileInput = document.getElementById("livesplitFile");
+    var fileInputLabel = document.getElementById("livesplitFileLabel");
+    if (fileInput.files.length == 1) {
+        var file = fileInput.files[0];
+        fileInputLabel.innerText = file.name;
+        file.text().then(onFileText);
+    }
+}
+
+function onFileText(text) {
+    var splitsFile = new DOMParser().parseFromString(text, "text/xml");
+    
+    var gameTimes = splitsFile.getElementsByTagName("AttemptHistory")[0].getElementsByTagName("GameTime");
+    var bestRun = null;
+    var bestId = -1;
+    for (let gameTime of gameTimes) {
+        var gameTimeValue = gameTime.innerHTML;
+        if (bestRun === null || gameTimeValue < bestRun) {
+            bestRun = gameTimeValue;
+            bestId = gameTime.parentElement.attributes["id"].value;
+        }
+    }
+
+    var segments = splitsFile.getElementsByTagName("Segment");
+    var table = document.createElement("table");
+    var splitsListDiv = document.getElementById("splitsList");
+    while (splitsListDiv.firstChild) {
+        splitsListDiv.removeChild(splitsListDiv.lastChild);
+    }
+
+    for (let segment of segments) {
+        var row = document.createElement("tr");
+
+        window.lastSegment = segment;
+        var segmentName = segment.getElementsByTagName("Name")[0].innerHTML;
+        var segmentTime = null;
+        for (let timeElement of segment.getElementsByTagName("Time")) {
+            if (timeElement.attributes["id"].value == bestId) {
+                segmentTime = timeElement.getElementsByTagName("GameTime")[0].innerHTML;
+                break;
+            }
+        }
+
+        if (segmentTime.startsWith("00:"))
+            segmentTime = segmentTime.slice(3);
+
+        var decimalPlaces = segmentTime.length - segmentTime.lastIndexOf('.') - 1;
+        segmentTime = segmentTime.slice(0, segmentTime.length - (decimalPlaces - 3));
+
+        var nameColumn = document.createElement("td");
+        nameColumn.innerText = segmentName;
+        row.appendChild(nameColumn);
+
+        var timeColumn = document.createElement("td");
+        timeColumn.innerText = segmentTime;
+        timeColumn.classList.add("text-monospaced");
+        row.appendChild(timeColumn);
+
+        splitsListDiv.appendChild(row);
+    }
+}
+</script>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->  
+  <footer>
+    <div class="container">
+        <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright text-muted m-0">Copyright &#xA9; 2021</p>
+                    <br />
+                    <ul class="list-inline text-center small">
+                            <li class="list-inline-item">
+                                <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                            </li>
+                    </ul>
+                    <br />
+                    <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+                </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+
+
+  
+
+  <!-- Custom scripts for this template -->
+  <script src="/js/clean-blog.js"></script>
+
+</body>
+
+</html>
