@@ -60,14 +60,12 @@ Having higher handling is very useful for online play where you need to be able 
 It is also useful in TTs for tracks which have tight or wide turns.
 
 ### Traction
-Traction affects how quickly you lose speed when off-road and the relative maximum speed you have off-road.
-If you are on the road the entire time you are driving then traction has no effect.
-There are a number of shortcuts in the game which require you to drive or hop off-road, for example the shortcut at the start of Mario Kart Stadium needs you to drive on top of the grass and release a mini-turbo.
-Having higher traction makes doing these shortcuts easier since you will have more room to finish building any MTs and a larger window of time that you can hop without losing your
-Having high traction can also be useful for online play if you are recovering from driving off-road.
+Traction affects how much you slip on tracks with ice or sand on the road.
+This includes the ice on tracks like Sherbet Land and Snow Land, and the sand on Dry Dry Desert and Donut Plains.
+For tracks that have no ice or sand, traction has no effect.
 
 ### Mini-Turbo
-Mini-Turbo affects how quickly you are able to accumulate build up mini-turbos, and how long they last once you release them.
+Mini-Turbo affects how quickly you are able to build up mini-turbos, and how long they last once you release them.
 For more information about how to calculate the time needed to accumulate an MT, refer to my [drifting guide](/drifting-guide#mt-accumulation) which goes into more detail.
 
 ### Invincibility
@@ -104,7 +102,7 @@ Sometimes to use a combination that has higher acceleration and lower speed, you
 To learn new lines, I would recommend reading my [blog post on how to learn lines](/posts/learning-lines).
 
 ### How to find new combinations to experiment with
-Knowing that you want more of a stat is one thing, but finding such a combination while minimising the number of sacrifices you have to make is another.
+Knowing that you want more of a stat is one thing, but finding such a combination while minimising the number of sacrifices you have to make is much harder.
 Currently there are 43 characters (with 5 more on the way), 41 vehicle bodies, 22 tires, and 15 gliders to choose from meaning 649,440 possible combinations to choose from.
 Trying every one of these combinations is impractical, so I have made a [tool](/tools/mk8dx-combo-finder) that lets you search for combinations with the stats that you want.
 The tool is just a table of all the combinations and their values, but each column has filter options that you can set so that you can filter the table down to only show the rows which match their filters.
