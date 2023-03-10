@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Vike&#x27;s Blog - LiveSplit Segment Time Extractor</title>
+  <title>Vike&#x27;s Blog - Mario Kart 8 Deluxe Combo Finder</title>
 
-  <link rel="canonical" href="/tools/livesplit-extractor">
+  <link rel="canonical" href="/tools/mk8dx-combo-finder">
 
       <link type="application/rss+xml" rel="alternate" href="/feed.rss" />
       <link type="application/atom+xml" rel="alternate" href="/feed.atom" />
@@ -17,10 +17,10 @@
   <meta name="msapplication-tooltip" content="Vike&#x27;s Blog" />
   <meta name="msapplication-starturl" content="/" />
 
-  <meta property="og:title" content="Vike&#x27;s Blog - LiveSplit Segment Time Extractor" />
-    <meta property="og:image" content="/images/bg/mks.png" />
+  <meta property="og:title" content="Vike&#x27;s Blog - Mario Kart 8 Deluxe Combo Finder" />
+    <meta property="og:image" content="/images/bg/bss.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/tools/livesplit-extractor" />
+  <meta property="og:url" content="/tools/mk8dx-combo-finder" />
   
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -85,14 +85,14 @@
 </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url(&quot;/images/bg/mks.png&quot;)">
+  <header class="masthead" style="background-image: url(&quot;/images/bg/bss.png&quot;)">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="site-heading">
           <h1>
-            LiveSplit Segment Time Extractor
+            Mario Kart 8 Deluxe Combo Finder
           </h1>
         </div>
       </div>
@@ -104,92 +104,8 @@
   <div class="container"> 
     <div class="row">
       <div id="content" class="col-md-12">  
-        <div class="custom-file mb-3">
-  <input type="file" class="custom-file-input" id="livesplitFile" accept=".lss" onchange="onFile()">
-  <label class="custom-file-label" for="livesplitFile" id="livesplitFileLabel">Select the LiveSplit file</label>
-</div>
-<div>
-<table class="table table-sm">
-<thead>
-<tr>
-<th scope="col">Segment Name</th>
-<th scope="col">Segment Time</th>
-</tr>
-</thead>
-<tbody id="splitsList">
-<tr><td colspan="2">No file selected</td></tr>
-</tbody>
-</table>
-</div>
-<style>
-.text-monospaced {
-    font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
-}
-</style>
-<script>
-function onFile() {
-    var fileInput = document.getElementById("livesplitFile");
-    var fileInputLabel = document.getElementById("livesplitFileLabel");
-    if (fileInput.files.length == 1) {
-        var file = fileInput.files[0];
-        fileInputLabel.innerText = file.name;
-        file.text().then(onFileText);
-    }
-}
+        <div id="comboFinder" style="height: 500px" class="ag-theme-alpine"></div>
 
-function onFileText(text) {
-    var splitsFile = new DOMParser().parseFromString(text, "text/xml");
-    
-    var gameTimes = splitsFile.getElementsByTagName("AttemptHistory")[0].getElementsByTagName("GameTime");
-    var bestRun = null;
-    var bestId = -1;
-    for (let gameTime of gameTimes) {
-        var gameTimeValue = gameTime.innerHTML;
-        if (bestRun === null || gameTimeValue < bestRun) {
-            bestRun = gameTimeValue;
-            bestId = gameTime.parentElement.attributes["id"].value;
-        }
-    }
-
-    var segments = splitsFile.getElementsByTagName("Segment");
-    var table = document.createElement("table");
-    var splitsListDiv = document.getElementById("splitsList");
-    while (splitsListDiv.firstChild) {
-        splitsListDiv.removeChild(splitsListDiv.lastChild);
-    }
-
-    for (let segment of segments) {
-        var row = document.createElement("tr");
-
-        window.lastSegment = segment;
-        var segmentName = segment.getElementsByTagName("Name")[0].innerHTML;
-        var segmentTime = null;
-        for (let timeElement of segment.getElementsByTagName("Time")) {
-            if (timeElement.attributes["id"].value == bestId) {
-                segmentTime = timeElement.getElementsByTagName("GameTime")[0].innerHTML;
-                break;
-            }
-        }
-
-        if (segmentTime.startsWith("00:"))
-            segmentTime = segmentTime.slice(3);
-
-        var decimalPlaces = segmentTime.length - segmentTime.lastIndexOf('.') - 1;
-        segmentTime = segmentTime.slice(0, segmentTime.length - (decimalPlaces - 3));
-
-        var nameColumn = document.createElement("td");
-        nameColumn.innerText = segmentName;
-        row.appendChild(nameColumn);
-
-        var timeColumn = document.createElement("td");
-        timeColumn.innerText = segmentTime;
-        timeColumn.classList.add("text-monospaced");
-        row.appendChild(timeColumn);
-
-        splitsListDiv.appendChild(row);
-    }
-}
-</script>
 
       </div>
     </div>
@@ -227,6 +143,12 @@ function onFileText(text) {
 
 
   
+	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+	<script src="/js/combo-finder.js"></script>
+	<style>
+		body > .container { max-width: 100%; }
+	</style>
+
 
   <!-- Custom scripts for this template -->
   <script src="/js/clean-blog.js"></script>
