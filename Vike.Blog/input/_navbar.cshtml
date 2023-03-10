@@ -20,6 +20,7 @@
                 <div class="dropdown-menu">
                     @foreach(IDocument child in doc
                         .GetChildren()
+                        .Where(x => x.GetBool("ShowInNavbar", true))
                         .OrderByDescending(x => x.GetString("NavTitle")))
                     {
                         @Html.DocumentLink(child, child.GetString("NavTitle"), new Dictionary<object, object> { ["class"] = "dropdown-item" })
