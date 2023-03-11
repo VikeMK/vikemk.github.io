@@ -4,7 +4,7 @@
 	<title />
 	<link rel="self" href="/" />
 	<rights>Copyright © 2023</rights>
-	<updated>2023-03-10T11:46:36Z</updated>
+	<updated>2023-03-11T11:11:38Z</updated>
 	<logo>/images/bg/mks.png</logo>
 	<entry>
 		<id>/posts/mk8dx-combos</id>
@@ -15,7 +15,7 @@
 		<content>&lt;p&gt;Version 2.3.0 of Mario Kart 8 Deluxe was released on March 9th, 2023.
 With this change came wave 4 of the Booster Course Pass including 8 new tracks, a new playable character, and a sleuth of statistic changes to characters, vehicle bodies, and tires.
 This post will cover all the changes that were made, some discussion about what each of the stats actually mean, and how you can use that to choose the combination you will use online.&lt;/p&gt;
-&lt;h2 id="what-changed"&gt;What changed?&lt;/h2&gt;
+&lt;h1 id="what-changed"&gt;What changed?&lt;/h1&gt;
 &lt;p&gt;A common criticism of Mario Kart 8 Deluxe is that if you were to play online you would be facing a room full of Waluigis.
 Before 2.3.0, Waluigi was by far the best character to use online because it allowed you to have a good balance of speed, weight, and acceleration.
 Over the last three waves of the Booster Course Pass, Nintendo has made significant balance changes which appear to have been done to address this criticism and level the playing field.&lt;/p&gt;
@@ -30,16 +30,16 @@ Someone using Mario, Standard Kart, and Standard Tires has now gotten an additio
 &lt;p&gt;Below is a brief summary of all the buffs that were made:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;All characters &lt;strong&gt;except&lt;/strong&gt; Waluigi, Donkey Kong, Roy, Wario, Dry Bowser, Metal Mario, Pink Gold Peach, Bowser, Morton, and Mii (Heavy) received +0.25 Speed.&lt;/li&gt;
-&lt;li&gt;Baby Mario, Baby Luigi, Dry Bones, Mii (Light), Toad, Shy Guy, Larry, Peach, Daisy, Yoshi, Mario, Ludwig, Mii (Medium), Luigi, and Iggy all received +0.25 Mini-Turbo&lt;/li&gt;
-&lt;li&gt;All bodies &lt;strong&gt;except&lt;/strong&gt; Biddybuggy, Mr. Scooty, Landship, Streetle, W 25 Silver Arrow, Standard Bike, Flame Rider, and Wild Wiggler received +0.25 Mini-Turbo&lt;/li&gt;
-&lt;li&gt;All tires &lt;strong&gt;except&lt;/strong&gt; Roller, Azure Roller, Button, and Leaf received +0.25 Mini-Turbo&lt;/li&gt;
+&lt;li&gt;Baby Mario, Baby Luigi, Dry Bones, Mii (Light), Toad, Shy Guy, Larry, Peach, Daisy, Yoshi, Mario, Ludwig, Mii (Medium), Luigi, and Iggy all received +0.25 Mini-Turbo.&lt;/li&gt;
+&lt;li&gt;All bodies &lt;strong&gt;except&lt;/strong&gt; Biddybuggy, Mr. Scooty, Landship, Streetle, W 25 Silver Arrow, Standard Bike, Flame Rider, and Wild Wiggler received +0.25 Mini-Turbo.&lt;/li&gt;
+&lt;li&gt;All tires &lt;strong&gt;except&lt;/strong&gt; Roller, Azure Roller, Button, and Leaf received +0.25 Mini-Turbo.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;All the parts that received buffs were ones that were not commonly used when playing online, and with these stat increases there are many more viable combinations that can be used.&lt;/p&gt;
-&lt;h2 id="what-do-the-stats-mean"&gt;What do the stats mean?&lt;/h2&gt;
+&lt;h1 id="what-do-the-stats-mean"&gt;What do the stats mean?&lt;/h1&gt;
 &lt;p&gt;To help with explaining how to choose your combination, below is a summary of each statistic type and how it translates to gameplay.
 Each statistic has a value between 0.75 to 5.75, and can be viewed in-game by pressing the plus button when selecting your vehicle.
 Some of the statistics are not viewable in-game such as Mini-Turbo, Invincibility, and the Air, Water, and Anti-Gravity parts of the speed and handling stats.
-To see these hidden statistics you can use a site such as &lt;a href="https://mk8dxbuilder.com/"&gt;mk8dxbuilder.com&lt;/a&gt;.&lt;/p&gt;
+To see these hidden statistics you can use a site such as &lt;a href="https://mk8dxbuilder.com/"&gt;mk8dxbuilder.com&lt;/a&gt; or my &lt;a href="/tools/mk8dx-combo-finder"&gt;MK8DX Combo Finder Tool&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="speed"&gt;Speed&lt;/h3&gt;
 &lt;p&gt;Speed is the top speed that you can reach. It also affects your speed when in a mushroom or a mini-turbo.
 Each combination has 4 speed stats: Ground, Air, Water, and Anti-Gravity which affect your top speed in each of those conditions.
@@ -76,15 +76,15 @@ As an example, if you were hit by a bomb, then an invincibility stat of 1 means 
 &lt;ul&gt;
 &lt;li&gt;Hitbox
 &lt;ul&gt;
-&lt;li&gt;The hitbox of a combination can vary even if they have identical stats&lt;/li&gt;
-&lt;li&gt;Having a larger hitbox means you don't have to drift as wide to get a coin and you can hang more over an edge without falling off&lt;/li&gt;
-&lt;li&gt;Having a smaller hitbox means you can avoid items easier and you can get closer to a wall without bumping it&lt;/li&gt;
+&lt;li&gt;The hitbox of a combination can vary even if they have identical stats.&lt;/li&gt;
+&lt;li&gt;Having a larger hitbox means you don't have to drift as wide to get a coin and you can hang more over an edge without falling off.&lt;/li&gt;
+&lt;li&gt;Having a smaller hitbox means you can avoid items easier and you can get closer to a wall without bumping it.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Drifting Style
 &lt;ul&gt;
-&lt;li&gt;Every vehicle body is one of 4 types: Kart (e.g. Biddybuggy), Standard Bike (e.g. Mr. Scooty), Sport Bike (e.g. Yoshi Bike), and ATV (e.g. Wild Wiggler)&lt;/li&gt;
-&lt;li&gt;Sport bikes (commonly known as inward bikes) are the most notably different, however the other three types have very subtle differences in how they drift&lt;/li&gt;
+&lt;li&gt;Every vehicle body is one of 4 types: Kart (e.g. Biddybuggy), Standard Bike (e.g. Mr. Scooty), Sport Bike (e.g. Yoshi Bike), and ATV (e.g. Wild Wiggler).&lt;/li&gt;
+&lt;li&gt;Sport bikes (commonly known as inward bikes) are the most notably different, however the other three types have very subtle differences in how they drift.&lt;/li&gt;
 &lt;li&gt;The differences between the outward drifting vehicle types are difficult to explain, but their turning circles when drifting vary slightly.
 Standard bikes have the most noticeable difference as when you start a drift it tends to go out very wide compared to karts and ATVs.&lt;/li&gt;
 &lt;/ul&gt;
@@ -96,7 +96,19 @@ Standard bikes have the most noticeable difference as when you start a drift it 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="how-to-choose-a-combination"&gt;How to choose a combination&lt;/h2&gt;
+&lt;h3 id="ground-anti-gravity-air-and-water-components"&gt;Ground, Anti-Gravity, Air, and Water components&lt;/h3&gt;
+&lt;p&gt;Speed and handling is split into four components based on the terrain you are driving on.
+I &lt;a href="https://docs.google.com/spreadsheets/d/1idLq3OYkEjRI0U64LCLxVY-GvdhRPgO75KZUPS4m70o/edit#gid=0"&gt;calculated&lt;/a&gt; the percentage of time across all tracks that is spent driving on each type of terrain and came up with the following distribution:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ground: 72.5%&lt;/li&gt;
+&lt;li&gt;Anti-Gravity: 19.5%&lt;/li&gt;
+&lt;li&gt;Air: 5.7%&lt;/li&gt;
+&lt;li&gt;Water: 2.3%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What this tells us is that ground is the most important stat to look at, followed by anti-gravity, while air and water have very little importance and it means you can safely ignore those stats unless you know you are playing on a track with lots of air time and lots of underwater driving.&lt;/p&gt;
+&lt;p&gt;It's important to note that if the underwater driving is on an anti-gravity section, the anti-gravity component of the stat takes precedence.
+This means that tracks like Water Park do not take advantage of the water component at all, despite most of the track being underwater.&lt;/p&gt;
+&lt;h1 id="how-to-choose-a-combination"&gt;How to choose a combination&lt;/h1&gt;
 &lt;p&gt;Rather than choosing one combination and sticking with it, your combination should change and evolve over time according to your playstyle.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;If you are getting bumped around too much, try a combination with higher weight.&lt;/li&gt;
@@ -113,20 +125,42 @@ To learn new lines, I would recommend reading my &lt;a href="/posts/learning-lin
 &lt;p&gt;Knowing that you want more of a stat is one thing, but finding such a combination while minimising the number of sacrifices you have to make is much harder.
 Currently there are 43 characters (with 5 more on the way), 41 vehicle bodies, 22 tires, and 15 gliders to choose from meaning 649,440 possible combinations to choose from.
 Trying every one of these combinations is impractical, so I have made a &lt;a href="/tools/mk8dx-combo-finder"&gt;tool&lt;/a&gt; that lets you search for combinations with the stats that you want.
-The tool is just a table of all the combinations and their values, but each column has filter options that you can set so that you can filter the table down to only show the rows which match their filters.
-Since the table is quite wide, you can drag to rearrange the columns to put the ones you care about first.&lt;/p&gt;
+The tool is a table of all the combinations and their values, and each column has filter options to help with finding the combination with the statistics you want.
+You can also download the data as a CSV to explore it using Excel or Google Sheets if you prefer.&lt;/p&gt;
 &lt;p&gt;To run a quick example, say that you are currently using Waluigi, Wild Wiggler, Roller, and Cloud Glider and you want something with more acceleration, and you are willing to sacrifice some speed and weight to get it.
 We know this combination has a speed of 3.5, acceleration of 4.25, and a weight of 3.
-Using the tool, we can find all combinations with an acceleration &amp;gt;= 4.5, speed &amp;gt;= 3.25, and weight &amp;gt;= 2.75.
+Using the tool, we can find all combinations with an acceleration ≥ 4.5, speed ≥ 3.25, and weight ≥ 2.75.
 After applying these filters, we can see there are 16 combinations that fit the criteria which we can look through and choose the best one.
-If we don't like these options, then we know we need to sacrifice more and we could change it to show all combinations with speed &amp;gt;= 3 instead.&lt;/p&gt;
-&lt;h3 id="what-is-a-good-starter-combination-for-me-to-try-out"&gt;What is a good starter combination for me to try out?&lt;/h3&gt;
-&lt;p&gt;If you are new to the game and are still learning your lines, you are likely to be making many mistakes, and drifting in ways that cause you to lose speed, so you will benefit a lot from good acceleration and handling stats.
-For this, I'd recommend looking for something with speed &amp;gt;= 2.25, acceleration &amp;gt;= 5, and handling &amp;gt;= 4.5.
-One combination that meets these requirements is Yoshi, Biddybuggy, Roller, Cloud Glider.&lt;/p&gt;
-&lt;p&gt;As you get more experience, you may not need to be as reliant on acceleration to make up for mistakes and can look for combinations with speed &amp;gt;= 3, acceleration &amp;gt;= 4.25, handling &amp;gt;= 3.5, and Mini-Turbo &amp;gt;= 4.25.
-For this, you will find hundreds of options and you can decide which of these stats you want to increase to filter it down further.
-One combination that meets these requirements is Rosalina, Teddy Buggy, Roller, Cloud Glider.&lt;/p&gt;
+If we don't like these options, then we know we need to sacrifice more and we could change it to show all combinations with speed ≥ 3 instead.&lt;/p&gt;
+&lt;h3 id="what-are-some-good-combinations-to-try-out"&gt;What are some good combinations to try out?&lt;/h3&gt;
+&lt;p&gt;Below you can find some good example combinations to try out.
+For each combination, Roller and Cloud Glider is used as they generally provide the best statistics, but Leaf Tires and Plane Glider are worth trying out as well.
+The table is sorted in descending order by acceleration.
+You should choose the combination by how much you balance acceleration and mini-turbo against speed.&lt;/p&gt;
+&lt;p&gt;If you are new to the game and are not sure which to try out first, Luigi with Biddybuggy would be a good starting place.
+Waluigi with Wild Wiggler is included in the table for reference, however it is mostly outclassed by Waluigi with Teddy Buggy, so that would be a good first combination to try while experimenting if that is what you used previously.&lt;/p&gt;
+&lt;div class="row justify-content-center"&gt;
+&lt;div class="col-auto"&gt;
+&lt;!--?# Table Class="table table-striped table-sm table-hover text-center table-responsive" HeaderRows=1 ?--&gt;
+&lt;!--?*
+Character Body Acceleration Mini-Turbo Speed Handling
+"Baby Mario / Baby Luigi / Dry Bones / Mii (Light)" Biddybuggy 5.75 5.75 1.25 5.25
+"Toadette / Wendy / Isabelle" Biddybuggy 5.75 5.5 1.5 5
+"Toad / Shy Guy / Larry" Biddybuggy 5.5 5.5 1.75 5
+"Cat Peach / Inkling Girl / Villager (F)" Biddybuggy 5.5 5.25 2 4.75
+"Peach / Daisy / Yoshi / Birdo" Biddybuggy 5.25 5.5 2.25 4.5
+"Luigi / Iggy" Biddybuggy 5 5.25 2.5 4.5
+"Peach / Daisy / Yoshi / Birdo" "Teddy Buggy" 4.75 5.25 2.75 4.25
+"Waluigi / Donkey Kong / Roy" Biddybuggy 4.75 4.75 3 3.75
+"Luigi / Iggy" "Teddy Buggy" 4.5 5 3 4.25
+"Wario / Dry Bowser" Biddybuggy 4.5 4.5 3.25 3.5
+"Rosalina / King Boo / Link" "Teddy Buggy" 4.25 4.75 3.25 3.75
+"Waluigi / Donkey Kong / Roy" "Teddy Buggy" 4.25 4.5 3.5 3.5
+"Waluigi / Donkey Kong / Roy" "Wild Wiggler" 4.25 4.25 3.5 3.5
+?--&gt;
+&lt;!--?#/ Table ?--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </content>
 		<summary>What the balance changes in version 2.3.0 mean for you</summary>
 	</entry>
