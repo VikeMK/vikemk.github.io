@@ -24,7 +24,7 @@ Someone using Mario, Standard Kart, and Standard Tires has now gotten an additio
 Below is a brief summary of all the buffs that were made:
 - All characters **except** Waluigi, Donkey Kong, Roy, Wario, Dry Bowser, Metal Mario, Pink Gold Peach, Bowser, Morton, and Mii (Heavy) received +0.25 Speed.
 - Baby Mario, Baby Luigi, Dry Bones, Mii (Light), Toad, Shy Guy, Larry, Peach, Daisy, Yoshi, Mario, Ludwig, Mii (Medium), Luigi, and Iggy all received +0.25 Mini-Turbo.
-- All bodies **except** Biddybuggy, Mr. Scooty, Landship, Streetle, W 25 Silver Arrow, Standard Bike, Flame Rider, and Wild Wiggler received +0.25 Mini-Turbo.
+- All bodies **except** Pipe Frame, Varmint, City Tripper, Biddybuggy, Mr. Scooty, Landship, Streetle, W 25 Silver Arrow, Standard Bike, Flame Rider, and Wild Wiggler received +0.25 Mini-Turbo.
 - All tires **except** Roller, Azure Roller, Button, and Leaf received +0.25 Mini-Turbo.
 
 All the parts that received buffs were ones that were not commonly used when playing online, and with these stat increases there are many more viable combinations that can be used.
