@@ -1,19 +1,22 @@
 Title: Mario Kart 8 Deluxe Combo Finder
-NavTitle: MK8DX Combo Finder
+NavbarTitle: MK8DX Combo Finder
+ShowInNavDropdown: true
 Image: /images/bg/bss.png
 ---
 
 <p>
-	You can also download this data as a CSV to use in Excel or Google Sheets here: <a href="@Context.GetLink("/data/mk8dx-stats.csv")">mk8dx-stats.csv</a>
+    You can also download this data as a CSV to use in Excel or Google Sheets here: <a href="@Context.GetLink("/data/mk8dx-stats.csv")">mk8dx-stats.csv</a>
 </p>
 
 <div id="comboFinder" style="height: 500px" class="ag-theme-alpine"></div>
 
 @section Scripts
 {
-	<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
-	<script src="/js/combo-finder.js"></script>
-	<style>
-		body > .container { max-width: 100%; }
-	</style>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="/js/combo-finder.js"></script>
+    <style>
+        body > .container {
+            max-width: 100%;
+        }
+    </style>
 }

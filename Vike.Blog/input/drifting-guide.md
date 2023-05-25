@@ -1,7 +1,8 @@
-﻿NavTitle: Drifting Guide
-Title: Vike’s Guide to Drifting in MK8DX
+﻿Title: Vike’s Guide to Drifting in MK8DX
+ShowInNavbar: true
+NavbarTitle: Drifting Guide
 PageTitle: Vike’s Guide to Drifting in MK8DX
-Order: 2
+Order: 102
 Image: /images/bg/rdp3.png
 ---
 
@@ -15,7 +16,7 @@ It is important to keep in mind what the acceleration, mini-turbo (MT), and spee
 - There is a hidden Mini-Turbo stat which is tied to your acceleration stat. This stat controls how fast you are able to accumulate your MT as well as how long the MT lasts after it is released.
 - The speed stat controls your maximum speed. The moment you reach your top speed your acceleration stat is no longer being taken advantage of.
 
-The exact value of the Mini-Turbo stat is not visible in-game, and so you must use a website such as [majorasmask9.github.io/mk8dstats](https://majorasmask9.github.io/mk8dstats) to see what it is.
+The exact value of the Mini-Turbo stat is not visible in-game, and so you must use a website such as [mk8dxbuilder.com](https://mk8dxbuilder.com/) or my own [combo finder](/tools/mk8dx-combo-finder) to see what it is.
 
 ## MT Accumulation
 When you start a drift, a counter starts which keeps track of how much mini-turbo (MT) you have accumulated. This counter value increases every frame (with 60 frames per second) and when this counter reaches a certain value, the colour of the sparks under your tire will change indicating what kind of MT you will get when you release the drift. Blue sparks means you will create a Mini-Turbo (MT), orange sparks means you will create a Super Mini-Turbo (SMT), and purple sparks means you will create an Ultra Mini-Turbo (UMT).

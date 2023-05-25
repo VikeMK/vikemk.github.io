@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <LangVersion>preview</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Statiq.Web" Version="1.0.0-beta.34" />
+    <PackageReference Include="Statiq.Web" Version="1.0.0-beta.55" />
   </ItemGroup>
 
 </Project>

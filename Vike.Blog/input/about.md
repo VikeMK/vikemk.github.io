@@ -1,6 +1,7 @@
 ﻿Title: About Me
-NavTitle: About
-Order: 3
+ShowInNavbar: true
+NavbarTitle: About
+Order: 103
 Image: /images/bg/rrrd.png
 ---
 Hi 👋 my name is Vike and I'm a 25 year old that lives in Brisbane, Australia.

@@ -1,14 +1,15 @@
 ArchiveSources: => "tools/*"
-ArchiveOrderKey: NavTitle
+ArchiveOrderKey: NavbarTitle
 ArchiveOrderDescending: true
+ShowInNavbar: true
 NavbarStyle: dropdown
-Order: 1
+Order: 101
 ---
 @foreach(IDocument doc in Document
     .GetChildren()
-    .OrderByDescending(x => x.GetString("NavTitle")))
+    .OrderByDescending(x => x.GetString("NavbarTitle")))
 {
     <div>
-        <h3>@Html.DocumentLink(doc, doc.GetString("NavTitle"))</h3>
+        <h3>@Html.DocumentLink(doc, doc.GetString("NavbarTitle"))</h3>
     </div>
 }

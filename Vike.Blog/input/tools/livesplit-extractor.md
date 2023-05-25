@@ -1,6 +1,6 @@
 ﻿Title: LiveSplit Segment Time Extractor
-NavTitle: LiveSplit Extractor
-ShowInNavBar: false
+NavbarTitle: LiveSplit Extractor
+ShowInNavDropdown: false
 ---
 
 <div class="custom-file mb-3">
