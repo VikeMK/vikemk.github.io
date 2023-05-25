@@ -8,9 +8,10 @@ jobs:
     - uses: actions/checkout@master
       with:
         submodules: recursive
-    - uses: actions/setup-dotnet@v1
+    - uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '8.0.100-preview.4' # SDK Version to use.
+        dotnet-version: 8.0.x
+        include-prerelease: true
     - run: dotnet run --project Vike.Blog -- deploy -l debug
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
