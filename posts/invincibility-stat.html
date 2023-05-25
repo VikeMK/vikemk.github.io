@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="How to calculate invincibility time for your combination">
+
+  <title>Vike&#x27;s Blog - Invincibility in Mario Kart 8 Deluxe</title>
+
+  <link rel="canonical" href='/posts/invincibility-stat'>
+
+      <link type="application/rss+xml" rel="alternate" href="/feed.rss" />
+      <link type="application/atom+xml" rel="alternate" href="/feed.atom" />
+
+  <meta name="application-name" content='Vike&#x27;s Blog' />
+  <meta name="msapplication-tooltip" content='Vike&#x27;s Blog' />
+  <meta name="msapplication-starturl" content='/' />
+
+  <meta property="og:title" content='Vike&#x27;s Blog - Invincibility in Mario Kart 8 Deluxe' />
+    <meta property="og:image" content='/images/bg/bwp.jpg' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content='/posts/invincibility-stat' />
+
+  <link rel="icon" href='/favicon.ico'>
+
+  <!-- Custom fonts for this template -->
+  <link href='/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
+
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
+  
+
+
+  
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href='/'>Vike&#x27;s Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+            <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Tools
+            </a>
+            <div class="dropdown-menu">
+<a class="dropdown-item" href="/tools/mk8dx-combo-finder">MK8DX Combo Finder</a>            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/drifting-guide">Drifting Guide</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(&quot;/images/bg/bwp.jpg&quot;)">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12">
+        <div class='post-heading'>
+          <h1>
+            Invincibility in Mario Kart 8 Deluxe
+          </h1>
+            <span class="subheading">How to calculate invincibility time for your combination</span>
+            <div class="meta">Published on Thursday, May 25, 2023</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div id="content" class="col-md-12">
+        <p>In version 2.2.0, Nintendo introduced a new hidden stat to Mario Kart 8 Deluxe, Invincibility, which controls how long you will be invincible for after you have gotten hit.
+In this blog post I will walk through how you can see this stat, how that stat value maps to a scaling factor, and how you can use the scaling factor to calculate exactly how long the invincibility time will be.</p>
+<p>The majority of the information and numbers in this guide come from the <a href="http://japan-mk.blog.jp/mk8dx.info-1">Mario Kart Blog</a> and it would not be possible without their work.</p>
+<h2 id="seeing-your-invincibility-stat">Seeing your invincibility stat</h2>
+<p>To find your invincibility stat, you will need to use a combo builder website and fill in your combination.
+Two such sites are <a href="https://mk8dxbuilder.com/">mk8dxbuilder.com</a> or the <a href="/tools/mk8dx-combo-finder">combo finder</a> on my site.
+The stat value should be a number between 1 and 5.75.</p>
+<p>As an example, the combination Yoshi / Inkstriker / Roller / Cloud Glider has an invincibility stat of 2.25.</p>
+<h2 id="how-it-gets-converted-to-in-game-invincibility-time">How it gets converted to in-game invincibility time</h2>
+<p>When you get hit, you are stopped and unable to move for a short period of time, then you are able to start driving again and the invincibility time (also known as invincibility frames or i-frames) will start.
+The duration of time you are unable to move, and the duration you are invincible depends on what you were hit by. Below is a table showing how many frames each component takes for each damage source. Durations are given in a number of frames which can be converted to seconds by dividing by 60 as Mario Kart 8 Deluxe runs at 60 frames per second.</p>
+<div class="row justify-content-center">
+<div class="col-auto">
+<table class="table table-striped table-bordered table-sm table-hover text-center table-responsive">
+  <thead>
+    <tr>
+      <th>Damage Source</th>
+      <th>Stopped Frames</th>
+      <th>Invincibility Frames</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Green Shell, Red Shell</td>
+      <td>90</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>Banana, Blue Shell, Bob-omb</td>
+      <td>90</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Lightning</td>
+      <td>60</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>Boomerang Flower</td>
+      <td>65</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <td>Bullet Bill, Super Horn</td>
+      <td>65</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>Fire Flower</td>
+      <td>63</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>Star, Piranha Plant, Other</td>
+      <td>60</td>
+      <td>60</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<p>The invincibility stat works by scaling up or down the number of invincibility frames and does not affect the number of stopped frames.
+To calculate how much it gets scaled by, you need to find the scaling factor using the following table.</p>
+<div class="row justify-content-center">
+<div class="col-auto">
+<table class="table table-striped table-bordered table-sm table-hover text-center table-responsive">
+  <thead>
+    <tr>
+      <th>Invincibility Stat</th>
+      <th>Scaling Factor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.00</td>
+      <td>0.65</td>
+    </tr>
+    <tr>
+      <td>1.25</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <td>1.50</td>
+      <td>0.70</td>
+    </tr>
+    <tr>
+      <td>1.75</td>
+      <td>0.74</td>
+    </tr>
+    <tr>
+      <td>2.00</td>
+      <td>0.79</td>
+    </tr>
+    <tr>
+      <td>2.25</td>
+      <td>0.85</td>
+    </tr>
+    <tr>
+      <td>2.50</td>
+      <td>0.91</td>
+    </tr>
+    <tr>
+      <td>2.75</td>
+      <td>0.97</td>
+    </tr>
+    <tr>
+      <td>3.00</td>
+      <td>1.03</td>
+    </tr>
+    <tr>
+      <td>3.25</td>
+      <td>1.09</td>
+    </tr>
+    <tr>
+      <td>3.50</td>
+      <td>1.15</td>
+    </tr>
+    <tr>
+      <td>3.75</td>
+      <td>1.20</td>
+    </tr>
+    <tr>
+      <td>4.00</td>
+      <td>1.25</td>
+    </tr>
+    <tr>
+      <td>4.25</td>
+      <td>1.29</td>
+    </tr>
+    <tr>
+      <td>4.50</td>
+      <td>1.33</td>
+    </tr>
+    <tr>
+      <td>4.75</td>
+      <td>1.37</td>
+    </tr>
+    <tr>
+      <td>5.00</td>
+      <td>1.41</td>
+    </tr>
+    <tr>
+      <td>5.25</td>
+      <td>1.44</td>
+    </tr>
+    <tr>
+      <td>5.50</td>
+      <td>1.47</td>
+    </tr>
+    <tr>
+      <td>5.75</td>
+      <td>1.50</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<p>Once you have the scaling factor, you can multiply it by the number of invincibility frames to get the actual number of invincibility frames you will experience in-game.</p>
+<h2 id="a-worked-example">A worked example</h2>
+<p>As an example, let's say that you are using Yoshi / Inkstriker / Roller / Cloud Glider and have just hit a banana.</p>
+<ul>
+<li>We know that the invincibility stat is 2.25, and using the table we can get a scaling factor of 0.85.</li>
+<li>Getting hit by a banana will stop you for 90 frames (1.5 seconds), and will then have a further 90 frames (1.5 seconds) of invincibility.</li>
+<li>We multiply the 90 frames of invincibility by 0.85 to get the correct invincibility frame count of ~77 frames (1.28 seconds).</li>
+<li>In total, you will be stopped or invincible for 167 frames (2.78 seconds).</li>
+</ul>
+<h2 id="some-more-examples-to-compare">Some more examples to compare</h2>
+<div class="row justify-content-center">
+<div class="col-auto">
+<table class="table table-striped table-bordered table-sm table-hover text-center table-responsive">
+  <thead>
+    <tr>
+      <th>Combination</th>
+      <th>Invincibility Stat</th>
+      <th>Damage Source</th>
+      <th>Stopped Duration</th>
+      <th>Invincibility Duration</th>
+      <th>Total Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yoshi / Inkstriker / Roller / Cloud</td>
+      <td>2.25</td>
+      <td>Banana</td>
+      <td>90F / 1.5s</td>
+      <td>77F / 1.28s</td>
+      <td>167F / 2.78s</td>
+    </tr>
+    <tr>
+      <td>Yoshi / Teddy Buggy / Button / Cloud</td>
+      <td>2.75</td>
+      <td>Banana</td>
+      <td>90F / 1.5s</td>
+      <td>87F / 1.45s</td>
+      <td>177F / 2.95s</td>
+    </tr>
+    <tr>
+      <td>Yoshi / Teddy Buggy / GLA / Cloud</td>
+      <td>3.25</td>
+      <td>Banana</td>
+      <td>90F / 1.5s</td>
+      <td>98F / 1.63s</td>
+      <td>188F / 3.13s</td>
+    </tr>
+    <tr>
+      <td>Yoshi / Inkstriker / Roller / Cloud</td>
+      <td>2.25</td>
+      <td>Star</td>
+      <td>60F / 1s</td>
+      <td>51F / 0.85s</td>
+      <td>111F / 1.85s</td>
+    </tr>
+    <tr>
+      <td>Yoshi / Teddy Buggy / Button / Cloud</td>
+      <td>2.75</td>
+      <td>Star</td>
+      <td>60F / 1s</td>
+      <td>58F / 0.97s</td>
+      <td>118F / 1.97s</td>
+    </tr>
+    <tr>
+      <td>Yoshi / Teddy Buggy / GLA / Cloud</td>
+      <td>3.25</td>
+      <td>Star</td>
+      <td>60F / 1s</td>
+      <td>65F / 1.08s</td>
+      <td>125F / 2.08s</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<h2 id="how-much-invincibility-do-i-need">How much invincibility do I need?</h2>
+<p>This is a much harder question to answer and it really comes down to each individual and their playstyle.
+My blog post on <a href="/posts/mk8dx-combos">choosing your combination</a> goes into more details about how to choose your combination and weigh it against the other stats.</p>
+<p>As an example of why playstyle matters, imagine a situation where you are in first place and you currently have two protective items, but you really want to get a super horn as you think a blue shell may come soon.
+Having higher invincibility makes throwing away those two protective items slightly less risky since the person behind you will have to space out red shells more to hit you twice, and it is more likely they will fail to space it apart enough and waste a red shell.
+If you are a more risk-averse player who would instead prefer to hold those two protective items, then maybe you won't benefit as much from that additional invincibility.</p>
+<p>A 0.25 increase in invincibility stat is not very noticeable, but a 1.00 increase in invincibility stat is much more noticeable with you getting around 0.35 seconds extra invincibility when hit by a banana and 0.23 seconds extra invincibility when hit by a star.
+It is easy to think of scenarios where having an extra 0.35 seconds of invincibility could get you a much better position at the end of the race.
+Increasing your invincibility stat will usually come at the cost of some other stat values, so you will need to weight those costs against the benefits when choosing your combination.</p>
+<p>GLA Tires seems to be a popular choice at the moment for getting significantly more invincibility, however it does come at the cost of 0.5 MT.
+Leaf and Button tires also are good options for getting a bit more invincibility while only sacrificing 0.25 MT.
+Cushion and Sponge tires also have very good invincibility, but from my experience they seem to be very bouncy and that impacts driving lines a lot where it may not be a viable choice, but I would encourage you to try it out and form your own opinion.
+If after all this, you think that the invincibility stat seems like it has too little impact to be useful, then sticking with Roller tires will be the best option.</p>
+
+
+        
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src='/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/js/clean-blog.js'></script>
+  
+
+  
+
+</body>
+
+</html>

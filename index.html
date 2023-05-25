@@ -5,45 +5,39 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
 
   <title>Vike&#x27;s Blog</title>
 
-  <link rel="canonical" href="/">
+  <link rel="canonical" href='/'>
 
       <link type="application/rss+xml" rel="alternate" href="/feed.rss" />
       <link type="application/atom+xml" rel="alternate" href="/feed.atom" />
-  
-  <meta name="application-name" content="Vike&#x27;s Blog" />
-  <meta name="msapplication-tooltip" content="Vike&#x27;s Blog" />
-  <meta name="msapplication-starturl" content="/" />
 
-  <meta property="og:title" content="Vike&#x27;s Blog" />
-    <meta property="og:image" content="/images/bg/mks.png" />
+  <meta name="application-name" content='Vike&#x27;s Blog' />
+  <meta name="msapplication-tooltip" content='Vike&#x27;s Blog' />
+  <meta name="msapplication-starturl" content='/' />
+
+  <meta property="og:title" content='Vike&#x27;s Blog' />
+    <meta property="og:image" content='/images/bg/mks.png' />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/" />
-  
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta property="og:url" content='/' />
 
-  <!-- Bootstrap core CSS -->
-  <link href="/vendor/bootstrap/scss/bootstrap.css" rel="stylesheet">
+  <link rel="icon" href='/favicon.ico'>
 
   <!-- Custom fonts for this template -->
-  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="/vendor/fontawesome-free/css/brands.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css' data-no-mirror>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' data-no-mirror>
-  
-  <!-- Custom styles for this template -->
-  <link href="/scss/clean-blog.css" rel="stylesheet">
-  
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
-  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+  <link href='/vendor/fontawesome-free/css/all.min.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" data-no-mirror>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" data-no-mirror>
 
-  <!-- Lunr search -->
-  
+  <!-- Styles for this template (also includes Bootstrap) -->
+  <link href='/scss/clean-blog.css' rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet">
+
   
 
 
@@ -56,41 +50,42 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="/">Vike&#x27;s Blog</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href='/'>Vike&#x27;s Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/posts">Posts</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                    Tools
-                </a>
-                <div class="dropdown-menu">
-<a class="dropdown-item" href="/tools/mk8dx-combo-finder">MK8DX Combo Finder</a>                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/drifting-guide">Drifting Guide</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-            </li>
-</ul>
+      <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+            <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Tools
+            </a>
+            <div class="dropdown-menu">
+<a class="dropdown-item" href="/tools/mk8dx-combo-finder">MK8DX Combo Finder</a>            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/drifting-guide">Drifting Guide</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+    
+      </ul>
     </div>
   </div>
 </nav>
 
+
   <!-- Page Header -->
   <header class="masthead" style="background-image: url(&quot;/images/bg/mks.png&quot;)">
-  <div class="overlay"></div>
-  <div class="container">
+  <div class="container position-relative">
     <div class="row">
       <div class="col-md-12">
-        <div class="site-heading">
+        <div class='site-heading'>
           <h1>
             Vike&#x27;s Blog
           </h1>
@@ -100,78 +95,89 @@
   </div>
 </header>
 
+
   <!-- Main Content -->
-  <div class="container"> 
+  <div class="container">
     <div class="row">
-      <div id="content" class="col-md-12">  
+      <div id="content" class="col-md-12">
         <div class="container-sm-height">
-    <div class="row row-sm-height">
-        <div class="col-md-6 right-border col-sm-height">
-            
+  <div class="row row-sm-height">
+    <div class="col-md-6 right-border col-sm-height">
+      
 
 
 <div class="post-preview">
-    <h2 class="post-title"><a href="/posts/mk8dx-combos">Choosing your combination in Mario Kart 8 Deluxe</a></h2>
-    <p class="post-meta">Published on Friday, March 10, 2023</p>                
+  <h2 class="post-title"><a href="/posts/invincibility-stat">Invincibility in Mario Kart 8 Deluxe</a></h2>
+  <p class="post-meta">Published on Thursday, May 25, 2023</p>
+<p>In version 2.2.0, Nintendo introduced a new hidden stat to Mario Kart 8 Deluxe, Invincibility, which controls how long you will be invincible for after you have gotten hit.
+In this blog post I will walk through how you can see this stat, how that stat value maps to a scaling factor, and how you can use the scaling factor to calculate exactly how long the invincibility time will be.</p>    <p class="small"><a href="/posts/invincibility-stat">Read more...</a></p>
+</div>
+
+
+<div class="post-preview">
+  <h2 class="post-title"><a href="/posts/mk8dx-combos">Choosing your combination in Mario Kart 8 Deluxe</a></h2>
+  <p class="post-meta">Published on Friday, March 10, 2023</p>
 <p>Version 2.3.0 of Mario Kart 8 Deluxe was released on March 9th, 2023.
 With this change came wave 4 of the Booster Course Pass including 8 new tracks, a new playable character, and a sleuth of statistic changes to characters, vehicle bodies, and tires.
-This post will cover all the changes that were made, some discussion about what each of the stats actually mean, and how you can use that to choose the combination you will use online.</p>        <p class="small"><a href="/posts/mk8dx-combos">Read more...</a></p>
+This post will cover all the changes that were made, some discussion about what each of the stats actually mean, and how you can use that to choose the combination you will use online.</p>    <p class="small"><a href="/posts/mk8dx-combos">Read more...</a></p>
 </div>
+
 
 <div class="post-preview">
-    <h2 class="post-title"><a href="/posts/learning-lines">Learning Lines in Mario Kart 8 Deluxe</a></h2>
-    <p class="post-meta">Published on Monday, November 15, 2021</p>                
+  <h2 class="post-title"><a href="/posts/learning-lines">Learning Lines in Mario Kart 8 Deluxe</a></h2>
+  <p class="post-meta">Published on Monday, November 15, 2021</p>
 <p>I am a strong believer that time trials are a great way for people to improve in competitive Mario Kart 8 Deluxe, and I have spent hundreds of hours practicing my lines in time trial mode.
-If a new player who is starting out is asking me for advice on what they can do to get better, I always tell them that improving your lines is a great way to get ahead of your competition.</p>        <p class="small"><a href="/posts/learning-lines">Read more...</a></p>
+If a new player who is starting out is asking me for advice on what they can do to get better, I always tell them that improving your lines is a great way to get ahead of your competition.</p>    <p class="small"><a href="/posts/learning-lines">Read more...</a></p>
 </div>
 
-        </div>
-        <div class="col-md-4 mt-4 mt-md-0 col-sm-height">
-            
-            
 
-        </div>
     </div>
+    <div class="col-md-4 mt-4 mt-md-0 col-sm-height sidebar">
+
+      
+
+    </div>
+  </div>
 </div>
+
+        
+
       </div>
     </div>
   </div>
 
   <hr>
 
-  <!-- Footer -->  
+  <!-- Footer -->
   <footer>
-    <div class="container">
-        <div class="row">
-                <div class="col-md-12 text-center">
-                    <p class="copyright text-muted m-0">Copyright &#xA9; 2023</p>
-                    <br />
-                    <ul class="list-inline text-center small">
-                            <li class="list-inline-item">
-                                <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
-                            </li>
-                    </ul>
-                    <br />
-                    <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
-                </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">Copyright &#xA9; 2023</p>
+
+        <ul class="list-inline text-center small">
+            <li class="list-inline-item">
+              <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+            </li>
+        </ul>
+        <br />
+        <div class="font-weight-bold small"><a href="https://statiq.dev">Generated by Statiq</a></div>
+      </div>
     </div>
+  </div>
 </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="/vendor/jquery/jquery.min.js"></script>
-  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Scripts -->
+  <script src='/vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='/vendor/startbootstrap-clean-blog/js/scripts.js'></script>
+  <script src='/js/clean-blog.js'></script>
   
 
-
   
-
-  <!-- Custom scripts for this template -->
-  <script src="/js/clean-blog.js"></script>
 
 </body>
 
