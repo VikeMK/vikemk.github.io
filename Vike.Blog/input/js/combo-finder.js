@@ -14,8 +14,8 @@
         "Medium (Group 5)": { "stats": [7, 7, 7, 7, 2, 6, 5, 5, 5, 5, 1, 3, 3], "parts": ["Luigi", "Iggy", "Kamek"] },
         "Heavy (Group 1)":  { "stats": [8, 8, 8, 8, 1, 7, 3, 3, 3, 3, 3, 2, 4], "parts": ["Rosalina", "King Boo", "Link"] },
         "Heavy (Group 2)":  { "stats": [8, 8, 8, 8, 1, 10, 3, 3, 3, 3, 1, 1, 3], "parts": ["Metal Mario", "Pink Gold Peach"] },
-        "Heavy (Group 3)":  { "stats": [8, 8, 8, 8, 1, 10, 3, 3, 3, 3, 1, 1, 6], "parts": ["Wiggler"] },
-        "Heavy (Group 4)":  { "stats": [9, 9, 9, 9, 1, 8, 2, 2, 2, 2, 0, 1, 4], "parts": ["Waluigi", "Donkey Kong", "Roy", "Petey Piranha"] },
+        "Heavy (Group 3)":  { "stats": [8, 8, 8, 8, 1, 10, 3, 3, 3, 3, 1, 1, 6], "parts": ["Peter Piranha"] },
+        "Heavy (Group 4)":  { "stats": [9, 9, 9, 9, 1, 8, 2, 2, 2, 2, 0, 1, 4], "parts": ["Waluigi", "Donkey Kong", "Roy", "Wiggler"] },
         "Heavy (Group 5)":  { "stats": [10, 10, 10, 10, 0, 9, 1, 1, 1, 1, 1, 0, 5], "parts": ["Wario", "Dry Bowser" ]},
         "Heavy (Group 6)":  { "stats": [10, 10, 10, 10, 0, 10, 0, 0, 0, 0, 0, 0, 6], "parts": ["Bowser", "Morton", "Mii (Heavy)" ]}
     };
@@ -85,8 +85,15 @@
                 for (const glider in gliders) {
                     const gliderData = gliders[glider];
                     let combinedStats = {};
+                    cols = [];
+                    cols.push(driverData.parts.join("/"));
+                    cols.push(bodyData.parts.join("/"));
+                    cols.push(tireData.parts.join("/"));
+                    cols.push(gliderData.parts.join("/"));
+
                     for (let i = 0; i < stats.length; i++) {
                         combinedStats[stats[i]] = (driverData.stats[i] + bodyData.stats[i] + tireData.stats[i] + gliderData.stats[i]) * 0.25 + 0.75;
+                        cols.push("" + combinedStats[stats[i]]);
                     }
                     combos.push({
                         combo: {
@@ -97,6 +104,8 @@
                         },
                         stats: combinedStats
                     });
+
+                    console.log(cols.join(","))
                 }
             }
         }
