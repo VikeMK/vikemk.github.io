@@ -1,4 +1,4 @@
-﻿Character,Body,Tires,Glider,Acceleration,Mini-Turbo,Speed,Speed (W),Speed (A),Speed (AG),Weight,Handling,Handling (W),Handling (A),Handling (AG),Traction,Invincibility
+﻿Character,Body,Tires,Glider,"Speed","Speed (Water)","Speed (Air)","Speed (Anti-Gravity)","Acceleration","Weight","Handling","Handling (Water)","Handling (Air)","Handling (Anti-Gravity)","Traction","Mini-Turbo","Invincibility"
 Baby Peach/Baby Daisy,Biddybuggy/Mr. Scooty,Roller/Azure Roller,Cloud Glider/Parachute/Flower Glider/Paper Glider,1,2.25,2.25,1.75,5.5,0.75,5.75,5.25,5.75,5.75,4.25,5.75,2.25
 Baby Peach/Baby Daisy,Biddybuggy/Mr. Scooty,Roller/Azure Roller,Peach Parasol/Parafoil/Bowser Kite/MKTV Parafoil,1,2,2.25,1.75,5.5,1,5.75,5.5,5.75,5.5,4,5.75,2.25
 Baby Peach/Baby Daisy,Biddybuggy/Mr. Scooty,Roller/Azure Roller,Super Glider/Waddle Wing/Hylian Kite,1.25,2.25,2.5,1.5,5.25,1,5.75,5.25,5.5,5.75,4.25,5.5,2.5
