@@ -1,13 +1,15 @@
-﻿Title: Vike’s Guide to Drifting in MK8DX
+﻿Title: How to drift in MK8DX
 ShowInNavbar: true
 NavbarTitle: Drifting Guide
-PageTitle: Vike’s Guide to Drifting in MK8DX
+PageTitle: Everything you need to know about drifting in Mario Kart 8 Deluxe
 Order: 102
 Image: /images/bg/rdp3.png
 ---
 
 ## Preface
-Hi, my name is Vike ([@VikeMK](https://twitter.com/vikemk)) and I’m a competitive Mario Kart player from Australia. In my almost 3 years in the competitive MK8DX community, something I have seen repeatedly are misconceptions and disagreements on how drifting works and how to drift optimally. I also haven’t seen any resources out there (in English) that distil all this information into one place, so I decided to try writing it myself. This guide is targeted to people who already know the basics and controls and so I won’t be going over things like how to perform a drift or what a mini-turbo is.
+Hi, my name is Vike ([@VikeMK](https://twitter.com/vikemk)) and I’m a competitive Mario Kart player from Australia and one of the administrators of [Mario Kart Central](https://mariokartcentral.com/). 
+This guide is a deep dive into how drifting works in Mario Kart 8 Deluxe, and how you can take advantage of it to improve your racing skills in time trials or when competing online.
+I assume you already know the basics and controls and so I won’t be going over how to perform a drift or what a mini-turbo is.
 
 ## Acceleration, Mini-Turbo, and Speed Stats
 It is important to keep in mind what the acceleration, mini-turbo (MT), and speed stats are for when choosing your combo. These are your most important stats and will have an impact on how you drive and what lines you take.

@@ -1,4 +1,4 @@
-﻿Title: Learning Lines in Mario Kart 8 Deluxe
+﻿Title: Learning lines in Mario Kart 8 Deluxe
 Description: A comparison of various strategies to learning your lines
 Published: 15/11/2021
 Image: /images/bg/drr.png
